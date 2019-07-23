@@ -74,5 +74,84 @@ droplet = actual raw code
 - create new file in root
 -- manifest.yml
 
+23 redploy application using manifest
+- if yml in same as code
+- cf push
+
+24 what happens when we deploy an appl to CF
+- use cf push
+- cloud controll receives push event and metadata
+- cloud controller receives raw source code ans stores in BLOB
+- cloud controller institiates app startup
+- cloud controller chooses the DEA for the app
+- DEA streams out app inf around
+- DEA create an image of the app and stores in BLOB
+
+25 Dev a Spring + PostgreSQL DB app 
+26 Deploy Spring + PostgreSQL DB app 
+
+28 what is platform
+- anything you can leverage to accomplish a task
+- you don't start from scratch
+- well known software are windows Mac OS
+- can extend to Linux, Unix, Android, iOS
+
+29 what is PaaS (see Trad_Iaas_PaaS)
+- history - you had to monitor everything... app, data, servers, network, etc
+- IaaS - Providers manage some (servers, network, storage, etc), but still had to manage other
+- Paas - Middleware, OS and above are managed, now you only have to manage App and Data
+
+30 Goals of PaaS
+- make easier to run application and not have to worry about traffic/load
+- you deploy, and platform figures out the rest
+- scale seamlessly, so you can focus on code
+
+31 PaaS on the market
+Cloud Foundry
+Amazon Web Services
+Google cloud Platform
+IBM Bluemix
+Microsoft Azure
+SAP cloud platform
+
+32 12-factor apps and design consideration for PaaS
+  - guidelines
+1. code is version controlled
+  be able to ship to other environments without issues
+2. Dependencies are declared and isolated
+  declared in manifest files
+3. Config is stored in the Environment
+  database connects differ from environment to environment -- need to be stored in config
+4. Backing Services as Attached Resources
+  queuing, caching
+  you can attach and deattach easily
+5. Build and Run stages are seperate
+6. Applicatoin executed as stateless processes
+  if crashes, should be isolated, if state is needed, it needs to be captured elsewhere
+7. Services are Exported via Port Binding
+  *this is the most important
+8. Applications scaled out via process model
+  scaling horizontally
+9. Process are disposable
+  minimal startup and graceful shutdown are key
+10. Parity between application environments
+  design for continuous deployment
+11. Logs treated as event streams
+  carry application state
+  apps should log for events
+12. Management tasks run as one-off processes
+  if cloud env, we should run scripts in the cloud (not on local CLI) - possible side-effects
+  
+33 Antipatterns for PaaS
+Rely on local file system
+  use resources as services
+Scaling up services the old way
+Trying to changing code on the server-side
+Manually coordinating builds
+Hard-coding configuration
+Trying to be monolithic everywhere
+
+
+
 
  
