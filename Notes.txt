@@ -30,5 +30,21 @@ Sign into account
 Where to?
   Pivotal web services
 
+2-13 Application Services
+- on demand resources = services
+  -- provisioning
+- Two types of Service Instances
+ - Managed Service Instance
+    -- Use bind command to add service
+ - User defined Service Instance
 
- 
+- Multiple Deployment Options
+  
+  
+2-14 Create service instances in CF
+cf marketplace 
+  once you find something you can add by using:
+cf create-service mongolab sandbox mongoservice
+  mongolab - create service using mongolab
+  sandbox - 
+  mongoservice - name I gave it
