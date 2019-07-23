@@ -13,7 +13,7 @@ Space
  Roles
   - allow to group permissions
   
-2-9 Logging into Space from CLI
+3-9 Logging into Space from CLI
 terminal window
 cf login
   api endpoint used -  if not found https://api.run.pivotal.io (saved in properties file)
@@ -25,12 +25,12 @@ Note
   Space: development
     this space is auto created
 
-2-10 Logging in to space via UI
+3-10 Logging in to space via UI
 Sign into account
 Where to?
   Pivotal web services
 
-2-13 Application Services
+3-13 Application Services
 - on demand resources = services
   -- provisioning
 - Two types of Service Instances
@@ -41,10 +41,14 @@ Where to?
 - Multiple Deployment Options
   
   
-2-14 Create service instances in CF
+3-14 Create service instances in CF
 cf marketplace 
   once you find something you can add by using:
 cf create-service mongolab sandbox mongoservice
   mongolab - create service using mongolab
   sandbox - 
   mongoservice - name I gave it
+
+3-15 - push first application
+droplet = actual raw code
+
