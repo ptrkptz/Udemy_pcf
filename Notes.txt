@@ -151,7 +151,47 @@ Manually coordinating builds
 Hard-coding configuration
 Trying to be monolithic everywhere
 
+34 taking a look at the running app
+
+35 update application
+  -- changes to application for testing TODO
+  - this pushes and updated version
+  
+36 monitor running instance with logs
+  cf logs [instance]
+    -- 
+  cf logs [instance] --recent
+  
+37 what options we have to manage instances
+  - add instances by scaling
+    -- SCALE APP button on Overview 'tab'
+  - service tab 
+    -- use to bind/unbind services
+  - routes tab
+  - tasks
+  - settings
+    -- change username
+    -- delete
+    
+38 understanding & using env variables
+  - application.properties
+  -- ex. -- spring.jpa.hiberate.ddl-auto=create
+    -- this will delete and recreate DB data on startup of app
+  - in YML file, can add environment variables
+    -- add env tag
+      must use _ instead of .
+        env: spring_jpa_hiberate_ddl-auto: update
+          update will add new data -- not purging existing data
+          
+39 Service Offering and Service binding to application instance
+  - cf marketplace
+    -- list of items that can be applible to your application
+  - cf create-service mlab sandbox mymlab
+    -- mlab = provider
+    -- sandbox = service plan
+    -- mymlab = whatever name you want
 
 
-
- 
+  
+   
+    -- 
